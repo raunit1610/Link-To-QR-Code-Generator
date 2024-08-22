@@ -1,0 +1,81 @@
+body{
+    background: linear-gradient(40deg, black,white);
+}
+.container{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    padding: 9%;
+    border: 7px inset black;
+    border-radius: 20%;
+    box-shadow: 0 0 25px gray;
+    animation: 5s work infinite;
+
+    &:hover{
+        box-shadow: 0 0 50px grey;
+    }
+}
+.container >img{
+    height: 200px;
+    width: 180px;
+}
+.container > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.container > form > label{
+    font-size: 1.5rem;
+    font-family: "Bodoni Moda SC", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    animation: 5s block infinite;
+}
+.container > form > input{
+    height: 5vh;
+    width: 20rem;
+}
+.container > form > input[value]{
+    position: relative;
+    border-radius: 30%;
+    width: 8rem;
+    top: 1rem;
+    left: 25%;
+
+    &:hover{
+        animation: 5s block infinite;
+        background-color: grey;
+    }
+}
+
+@keyframes block{
+    0%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 20%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes work{
+    0%{
+        background: linear-gradient(90deg,white,black);
+    }
+    25%{
+        background: linear-gradient(60deg,white,black);
+    }
+    50%{
+        background: linear-gradient(45deg,white,black);
+    }
+    75%{
+        background: linear-gradient(30deg,white,black);
+    }
+    100%{
+        background: linear-gradient(15deg,white,black);
+    }
+}

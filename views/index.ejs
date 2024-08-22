@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container anim">
+        <% if(locals.verify == "yes") {%>
+            <img src="/images/qr_imag.png" alt="Enter Correct URL">
+        <% } else { %>
+            <form action="/qr" method="POST">
+                <label for="image">Enter Your URL</label>
+                <input type="text" name="image" placeholder="Generate QR of Your URL..">
+                <input type="submit" value="Generate">
+            </form>
+        <% } %>
+    </div>
+</body>
+</html>
